@@ -1,0 +1,42 @@
+kernel/crypto/crct10dif_common.ko:
+kernel/crypto/crct10dif_generic.ko: kernel/crypto/crct10dif_common.ko
+kernel/crypto/af_alg.ko:
+kernel/crypto/algif_hash.ko: kernel/crypto/af_alg.ko
+kernel/crypto/algif_skcipher.ko: kernel/crypto/af_alg.ko
+kernel/drivers/pwm/pwm-atmel.ko:
+kernel/drivers/pwm/pwm-atmel-tcb.ko:
+kernel/drivers/misc/eeprom/eeprom_93cx6.ko:
+kernel/drivers/net/wireless/rt2x00/rt2x00lib.ko:
+kernel/drivers/net/wireless/rt2x00/rt2x00usb.ko: kernel/drivers/net/wireless/rt2x00/rt2x00lib.ko
+kernel/drivers/net/wireless/rt2x00/rt2800lib.ko: kernel/drivers/net/wireless/rt2x00/rt2x00lib.ko
+kernel/drivers/net/wireless/rt2x00/rt73usb.ko: kernel/drivers/net/wireless/rt2x00/rt2x00usb.ko kernel/drivers/net/wireless/rt2x00/rt2x00lib.ko
+kernel/drivers/net/wireless/rt2x00/rt2800usb.ko: kernel/drivers/net/wireless/rt2x00/rt2800lib.ko kernel/drivers/net/wireless/rt2x00/rt2x00usb.ko kernel/drivers/net/wireless/rt2x00/rt2x00lib.ko
+kernel/drivers/net/tun.ko:
+kernel/drivers/usb/host/ohci-hcd.ko:
+kernel/drivers/usb/host/ohci-at91.ko: kernel/drivers/usb/host/ohci-hcd.ko
+kernel/drivers/usb/storage/usb-storage.ko:
+kernel/drivers/usb/gadget/udc/at91_udc.ko:
+kernel/drivers/usb/gadget/udc/atmel_usba_udc.ko:
+kernel/drivers/usb/gadget/function/u_ether.ko:
+kernel/drivers/usb/gadget/function/usb_f_ecm.ko: kernel/drivers/usb/gadget/libcomposite.ko kernel/drivers/usb/gadget/function/u_ether.ko
+kernel/drivers/usb/gadget/function/usb_f_eem.ko: kernel/drivers/usb/gadget/libcomposite.ko kernel/drivers/usb/gadget/function/u_ether.ko
+kernel/drivers/usb/gadget/function/usb_f_ecm_subset.ko: kernel/drivers/usb/gadget/libcomposite.ko kernel/drivers/usb/gadget/function/u_ether.ko
+kernel/drivers/usb/gadget/function/usb_f_rndis.ko: kernel/drivers/usb/gadget/libcomposite.ko kernel/drivers/usb/gadget/function/u_ether.ko
+kernel/drivers/usb/gadget/legacy/g_ether.ko: kernel/drivers/usb/gadget/function/usb_f_rndis.ko kernel/drivers/usb/gadget/libcomposite.ko kernel/drivers/usb/gadget/function/u_ether.ko
+kernel/drivers/usb/gadget/libcomposite.ko:
+kernel/drivers/i2c/busses/i2c-at91.ko:
+kernel/drivers/media/usb/gspca/gspca_main.ko:
+kernel/drivers/leds/leds-pwm.ko:
+kernel/drivers/ssb/ssb.ko:
+kernel/sound/soundcore.ko:
+kernel/sound/core/snd.ko: kernel/sound/soundcore.ko
+kernel/sound/core/snd-hwdep.ko: kernel/sound/core/snd.ko kernel/sound/soundcore.ko
+kernel/sound/core/snd-timer.ko: kernel/sound/core/snd.ko kernel/sound/soundcore.ko
+kernel/sound/core/snd-pcm.ko: kernel/sound/core/snd-timer.ko kernel/sound/core/snd.ko kernel/sound/soundcore.ko
+kernel/sound/core/snd-rawmidi.ko: kernel/sound/core/snd.ko kernel/sound/soundcore.ko
+kernel/sound/usb/snd-usb-audio.ko: kernel/sound/core/snd-pcm.ko kernel/sound/core/snd-timer.ko kernel/sound/usb/snd-usbmidi-lib.ko kernel/sound/core/snd-rawmidi.ko kernel/sound/core/snd-hwdep.ko kernel/sound/core/snd.ko kernel/sound/soundcore.ko
+kernel/sound/usb/snd-usbmidi-lib.ko: kernel/sound/core/snd-rawmidi.ko kernel/sound/core/snd.ko kernel/sound/soundcore.ko
+kernel/net/ipv4/ipip.ko:
+kernel/net/ipv4/gre.ko:
+kernel/net/ipv4/ip_gre.ko: kernel/net/ipv4/gre.ko
+kernel/lib/crc-t10dif.ko: kernel/crypto/crct10dif_common.ko
